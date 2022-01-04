@@ -1,0 +1,324 @@
+.header-modal {
+  /* https://www.b3multimedia.ie/beautiful-color-gradients-for-your-next-design-project/ */
+  height: 20rem;
+  justify-content: center;
+}
+
+.jumbotron {
+  position: relative;
+  background: none;
+  background: linear-gradient(45deg, #2e3192, #1bffff);
+  background-position: center;
+
+}
+
+
+.jumbotron:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #2e3192, #1bffff);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.profileImage {
+  max-width: 66%;
+  max-height: 80%;
+  margin: 4rem 0 0 2rem;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  color:ivory
+}
+
+.section-1{
+  padding-top: 6rem;
+}
+
+.personal-info {
+  margin-top: 3rem;
+}
+
+.profileLogo a {
+  color: ivory;
+  margin: 3rem 2rem 0rem;
+}
+.profile-communication-links a:hover{
+  color: black;
+}
+.profile-communication-links a {
+  color: ivory;
+  margin: 3rem 2rem 0rem;
+}
+
+.personal-label {
+  margin-right: 0.5rem;
+}
+
+.personal-info dt {
+  float: left;
+  width: 100px;
+  opacity: 0.7;
+  color: #fff;
+}
+
+.personal-info dd > a {
+  transition: all 0.3s;
+  color: ivory;
+  text-decoration-line: none;
+  text-indent: 0px;
+}
+
+.profileLogo a:hover{
+  color:black
+}
+.personal-info dd {
+  margin-bottom: 16px;
+  margin-left: 100px;
+}
+
+/* @media (max-width: 990px) {
+  .profileInfo {
+    margin-top: 4rem;
+    color: ivory;
+  }
+  .personal-info {
+    margin-top: 1.5rem;
+  }
+} */
+
+@media (max-width: 576px) and (min-width: 312px)  {
+  .profileImage {
+    display: none;
+  }
+  .jumbotron-mobile {
+    /* background-image: url("../src/data/ProfilePic-CroppedZoomed.png") !important; */
+    background: linear-gradient(45deg, #2e3192, #1bffff);
+    background-repeat: no-repeat;
+    /* opacity: 0.1; */
+  }
+
+  .profileInfo {
+    position:relative;
+    color:  #2e3192;
+    font-size: 20px;
+  }
+}
+
+/* General Sections */
+.general-section {
+  padding: 2rem 3rem 1rem 3rem;
+}
+.general-section-title {
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+  opacity: 0.7;
+  font-weight: normal;
+}
+
+.general-sub-section {
+  padding: 2rem 3rem 1rem 3rem;
+}
+.general-sub-section-title {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.3rem;
+  opacity: 0.7;
+}
+.pill-button {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  background-color: var(--button-bg);
+  padding: 16px 22px;
+  font-size: 14px;
+  border-radius: 100px !important;
+  transition: opacity 300ms linear;
+}
+
+/* .sub-section-card {
+  padding-bottom: 1rem;
+  justify-  : space-around;
+}
+.employer-logo {
+  max-width: 65px;
+  min-height: 65px;
+}
+.card-section-title {
+  display: flex;
+}
+.card-section {
+  width: max-content;
+}
+.individual-card {
+  padding-bottom: 1rem;
+}
+.position-title {
+  margin: 1.5rem 28px;
+}
+@media (max-width: 850px) {
+  .general-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.scrolled {
+  background: #fff;
+}
+
+.employer-info a {
+  margin: 0px 13px;
+  opacity: 0.7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: large;
+}
+
+.employer-info p {
+  margin: 0px 13px;
+  opacity: 0.7;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration-color: #2e3192,;
+  font-weight: 400;
+  font-size: small
+  
+} */
+
+.employer-subsection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1.7rem;
+}
+
+.employer-card-section {
+  position: relative;
+  background-color: #fff;
+  padding: 24px 32px;
+  margin-bottom: 32px;
+  box-shadow:  0 0 50px rgb(0 0 0 / 20%);
+}
+
+.employer-short-name{
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  text-decoration-color: chocolate;
+}
+
+.employer-card-header-section {
+  display: flex;
+}
+/* .employer-logo {
+  height: 100px;
+  width: 100px;
+} */
+
+.position-title{
+  margin: 0px 25px;
+  opacity: 0.7;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: .1rem;
+  font-weight: bolder;
+  color: #2e3192;
+}
+
+.employer-name{
+  margin: 0px 25px;
+  padding: 1rem 0rem;
+  opacity: 0.8;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration-color: #2e3192,;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: medium;
+  font-weight: bolder;
+  letter-spacing: .125rem;
+  display: inline-block;
+}
+
+.employer-card-info{
+  margin: 8px 0 0 32px
+}
+
+.employer-card-information{
+  margin: 0px 25px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  word-spacing: 1px;
+  letter-spacing: .5px;
+  padding:.5rem 0rem
+}
+.employer-date {
+  margin: 0px 25px;
+  padding: 0rem 0rem;
+  opacity: 0.5;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.employer-logo{
+  width:max-content
+}
+
+@media (max-width: 850px){
+
+  .employer-card-header-section{
+    flex-direction: column;
+    text-align: center;
+  }
+  .employer-card-section{
+    width: 100%;
+    padding: 0;
+  }
+  .employer-subsection{
+    margin: 0;
+  }
+  .employer-card-info{
+    margin: 0;
+    text-align: center;
+  }
+  .employer-date {
+    padding: 0;
+  }
+  .employer-name{
+    padding: 0;
+  }
+  .employer-logo {
+    width: max-content;
+    padding-left: auto;
+
+  }
+  .employer-logo-container{
+    display: flex;
+    justify-content: center;
+  }
+  .education-logo{
+    margin: auto;
+    margin-bottom:10px
+  }
+  .position-title{
+    font-size: 18px;
+    padding: 0;
+    margin: 15px 25px;
+  }
+  .employer-card-information{
+   padding: 18px;
+    margin: auto
+  }
+}
+@import "../src/components/Navigation/NavBar.css";
+@import "../src/components/Footer/Footer.css";
+@import '../src/components/Skills/Skills.css';

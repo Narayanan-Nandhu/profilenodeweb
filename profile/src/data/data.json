@@ -1,0 +1,23 @@
+{
+  "skills": {
+    "primary": [
+      "React",
+      "ES6+ Javascript",
+      "NodeJS",
+      "ES6 + Javascript",
+      "TypeScript",
+      "CSS3",
+      "HTML5",
+      "Bootstrap",
+      "GraphQL"
+    ],
+    "professional":[
+        "Agile",
+        "Jira",
+        "Communication",
+        "Software Development cycle",
+        "Continous Integration",
+        "Jenkins"
+    ]
+  }
+}

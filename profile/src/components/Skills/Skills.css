@@ -1,0 +1,40 @@
+.skills-badge{
+
+    display: inline-block;
+    padding: 0.35em .75rem;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 5rem;
+    font-family: "Roboto Mono", monospace;
+    background-color: #FFF;
+    color: #0d6efd;
+    border-color: #0d6efd ;
+    border-width: .5px;
+    
+    }
+    
+    
+    .skills-badge:hover{
+        color: white;
+        background-color: #0d6efd;
+    }
+    
+    .skills-section h3 {
+        padding-right: 8px;
+    }
+    
+    .skills-section{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: .5rem;
+    }
+    
+    .skills-type-head{
+        font-size: 20px;
+        font-family: "Roboto Mono", monospace;
+        opacity: 0.7;
+        font-weight: normal;
+    }
