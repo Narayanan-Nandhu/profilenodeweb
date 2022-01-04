@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cd client && npm install ",
+    "postinstall": "cd profile && npm install ",
     "client": "npm run start --prefix profile",
     "server:dev": "nodemon index.js --ignore './client/",
     "server": "node index.js",
