@@ -136,7 +136,7 @@ const Footer = () => {
                     </Form.Group>
                     <Row>
                       <Col>
-                        <Button variant="light" type="submit" className='submit-button'>
+                        <Button variant="primary" type="submit" className='submit-button'>
                           Submit
                         </Button>
                       </Col>

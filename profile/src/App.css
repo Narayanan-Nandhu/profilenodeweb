@@ -4,6 +4,14 @@
   justify-content: center;
 }
 
+.snow-fall-customise {
+  z-index: 1;
+}
+#resume {
+  background-color: #0d6efd !important;
+  border-color: ivory;
+}
+
 .jumbotron {
   position: relative;
   background: none;
@@ -109,7 +117,8 @@
 
   .profileInfo {
     position:relative;
-    color:  #2e3192;
+    color: ivory;
+    height: 40vh;
     font-size: 20px;
   }
 }

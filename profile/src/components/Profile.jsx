@@ -55,7 +55,7 @@ const Profile = () => {
               <h2 className="general-section-title"><strong>About Me</strong></h2>
               <div class="general-section--description">
                 <p>
-                  Hi, I'm Narayanan, a Computer Engineer specialized in
+                  Hi, I'm Narayanan, a Software Engineer specialized in
                   <strong> web development</strong>. Always trying to learn new
                   things in a <strong>self-learning</strong> manner and apply them
                   to solve all challenges.
@@ -75,6 +75,7 @@ const Profile = () => {
                 target="_blank"
                 value="Save Resume"
                 rel="noreferrer"
+                
               >
                 Save Resume
               </Button>
