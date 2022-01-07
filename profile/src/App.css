@@ -65,9 +65,12 @@
 }
 .profile-communication-links a {
   color: ivory;
-  margin: 3rem 2rem 0rem;
+  margin: 3rem 2rem 0rem 0rem;
 }
 
+.profile-communication-links {
+  padding-top: 1.5rem;
+}
 .personal-label {
   margin-right: 0.5rem;
 }

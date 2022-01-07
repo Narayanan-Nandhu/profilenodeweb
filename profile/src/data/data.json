@@ -4,12 +4,14 @@
       "React",
       "ES6+ Javascript",
       "NodeJS",
-      "ES6 + Javascript",
+      "Redux",
       "TypeScript",
       "CSS3",
       "HTML5",
       "Bootstrap",
-      "GraphQL"
+      "GraphQL",
+      "Selenium",
+      "Cypress"
     ],
     "professional":[
         "Agile",
@@ -17,7 +19,8 @@
         "Communication",
         "Software Development cycle",
         "Continous Integration",
-        "Jenkins"
+        "Jenkins",
+        "Functional Testing"
     ]
   }
 }

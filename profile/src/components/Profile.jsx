@@ -26,8 +26,8 @@ const Profile = () => {
             <Image src={ProfilePic} className="profileImage" roundedCircle />
           </Col>
           <Col  sm={10} md={7} xl={8} className="profileInfo">
-            <Container>
-              <div style={ {margin: "2rem"} } >
+            <Container className="justify-content-center">
+              <div >
               <h1>
                 <strong>Narayanan Srinivasan</strong>
               </h1>

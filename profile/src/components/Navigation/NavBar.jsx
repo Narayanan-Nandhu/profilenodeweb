@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import { Navbar, Nav, Row, Offcanvas } from "react-bootstrap";
-import SideNav from "./sideNav";
+import { Navbar, Nav, Offcanvas } from "react-bootstrap";
 import navBarScrolled from "../utils";
 import { MenuArrow } from '@styled-icons/evaicons-solid/MenuArrow'
-import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
+
 const NavBar = (navdata) => {
   const { navList } = navdata;
   navBarScrolled();
   const [show, setShow] = useState(false);
   // const [scrollTo, setScrollTo] = useState('aboutMe');
   const [ scrolled, setscrolled] = useState(false);
-var scrollView;
 const handleSideNavOpen = () => {
   setShow(true);
 };
@@ -78,28 +76,3 @@ elmnt.scrollIntoView();
 };
 
 export default NavBar;
-
-
-// Im removed piece of code, could save you in future :)
-{/* <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-         {width==='0%' ? <span class="navbar-toggler-icon"  onClick={openSidenav} ></span>: null}
-         <SideNav sideNavProps={sideNavProps}/>
-        </button> */}
-
-{/* <div class="collapse navbar-collapse" id="navbarSupportedContent"> */ }
-
-{/* <Offcanvas.Body>
-<Nav className="justify-content-start flex-grow-1 pe-3">
-{navList.map((navItem) => {
-  return (<Nav.Link href={navItem.href}>{navItem.name}</Nav.Link>)
-})}            
-</Nav>
-</Offcanvas.Body> */}

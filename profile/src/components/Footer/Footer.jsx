@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Row,
   Col,
   Container,
-  FloatingLabel,
   Form,
-  Button,
-  Toast
+  Button
 } from "react-bootstrap";
 import PersonalInfo from '../PersonalInfo';
-// import sendEmail from '../../Service/nodeMailer'
-import { MailCheckmark } from "@styled-icons/fluentui-system-filled/MailCheckmark";
-import { MailError } from "@styled-icons/fluentui-system-filled/MailError";
-
 import { toast, ToastContainer } from 'react-toastify';
 toast.configure();
 

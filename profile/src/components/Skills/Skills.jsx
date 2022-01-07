@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Data from "../../data/data.json";
 
 const skills = () => {
