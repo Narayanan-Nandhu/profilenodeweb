@@ -48,6 +48,7 @@ const sendEmail = async (emailOptions) => {
 try {
     let emailTransporter = await createTransporter();
     await emailTransporter.sendMail(createEmailObj);
+    res.json( {mailDeliveryStatus: "success"} )
     console.log("Email Sent Successfully")
 } catch (err) {
     console.log("Error ==> ", err)

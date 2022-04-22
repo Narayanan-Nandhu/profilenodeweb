@@ -1,10 +1,10 @@
 const sendEmail = require("./nodeMailer").sendEmail;
 
-function sendEmailHandler (req, res) {
+async function sendEmailHandler (req, res) {
     const requestObject = req.body;
     try {
-        sendEmail(requestObject)
-        return {mailDeliveryStatus: "success"}
+        const result = await sendEmail(requestObject);
+        return result;
     } catch (err) {
         console.log("sendEmail Handler recieved error.. ");
         return {mailDeliveryStatus: "failed"}

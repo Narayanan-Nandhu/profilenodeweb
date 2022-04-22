@@ -7,7 +7,7 @@ import ProfilePic from "../../src/data/ProfilePic.png";
 import { Github } from "@styled-icons/bootstrap/Github";
 import { Linkedin } from "@styled-icons/bootstrap/Linkedin";
 import { Email } from "@styled-icons/evaicons-solid/Email";
-import Resume from "../data/Narayanan_3.pdf";
+import Resume from "../data/Narayanan.pdf";
 import Employment from "./Employment";
 // import PersonalInfo from "./PersonalInfo";
 import Education from "./Education";
