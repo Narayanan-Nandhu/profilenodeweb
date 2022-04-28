@@ -1,14 +1,15 @@
 import React from "react";
-import { Row, Container } from "react-bootstrap"
-import TileComponent from './Tile/TileComponent';
-import EmploymentData from '../data/Employment.json';
+import { Row, Container } from "react-bootstrap";
+import EducationData from "../../data/Education.json"
+import TileComponent from "../Tile/TileComponent";
 
-const Employment = () => {
+
+const Education = () => {
   return (
     <Container className="tile" >
-       <h3><strong>Employment</strong></h3>
+       <h3><strong>Education</strong></h3>
       <Row className="justify-content-md-center">
-          {EmploymentData.map((value, key) => {
+          {EducationData.map((value, key) => {
             return (
               <React.Fragment key={key}>
                 <TileComponent 
@@ -26,6 +27,7 @@ const Employment = () => {
       </Row>
     </Container>
   )
-}
+};
 
-export default Employment;
+export default Education;
+

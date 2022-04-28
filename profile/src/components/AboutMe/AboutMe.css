@@ -1,0 +1,10 @@
+
+.about-me{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+.resume-button {
+    border-radius: 1rem !important;
+    background:  linear-gradient(45deg, #f12711, #f5af19) !important;
+}
+

@@ -1,0 +1,77 @@
+.tile-box {
+  border-radius: 1rem;
+  border-inline-color: red;
+  background: linear-gradient(45deg, #f12711, #f5af19);
+  transition-timing-function: linear;
+  box-shadow: 0 0 50px rgb(255 127 0 / 20%);
+  margin: 0.5rem;
+  text-align: center;
+}
+.tile {
+  height: auto;
+  width: auto;
+  text-decoration-color: azure;
+  color: azure;
+}
+.tile-logo-name {
+  margin: 0.3rem 0rem !important;
+  padding: 1rem;
+}
+
+.tile-logo-name h5 {
+  color: ivory;
+}
+@media (max-width: 576px) and (min-width: 312px) {
+  .tile-logo-image {
+    margin: 5rem;
+  }
+}
+
+.tile-logo-image {
+  margin: 0.5rem 0rem !important;
+  width: 100%;
+}
+
+.tile-details {
+  margin: auto;
+  display: flex;
+  justify-content: center !important;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 2rem
+}
+.tile-subheader {
+  text-align: center;
+}
+
+.tile-second-half{
+  margin: 1.5rem auto !important;
+  margin-top: 3rem !important;
+}
+
+ 
+.tile-description {
+  margin-top: 1.5rem  !important
+}
+
+@media(max-width:767px) {
+  .tile-logo-image {
+    margin: 0.5rem auto !important;
+    align-items: center;
+    display: flex;
+    width: 60%;
+  }
+  .tile-second-half{
+    margin: 1.5rem auto !important;
+    margin-top: 0rem !important;
+  }
+
+  .tile-box {
+    background:  linear-gradient(45deg, #1a2a6c,#b21f1f, #fdbb2d);;
+  }
+  .tile-subheader {
+    text-align: center;
+  }
+}

@@ -15,13 +15,18 @@
       "id": 2
     },
     {
+      "name": "Skills",
+      "href": "#skills",
+      "id": 3
+    },
+    {
       "name": "PortFolio",
       "href": "#portFolio",
-      "id": 3
+      "id": 4
     },
     {
       "name": "Contact",
       "href": "#contact",
-      "id": 4
+      "id": 5
     }
   ]

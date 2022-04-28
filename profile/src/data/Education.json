@@ -1,24 +1,28 @@
-[{
-    "course": "Bachelor of Technology",
-    "where": "Sri Manakula Vinayagar Engineering College",
-    "period": "April 2015 - May 2019",
+[
+{
+    "logoSrc": "Smvec.png",
+    "tileName": "B.Tech (EEE)",
+    "tileHeader": "Bachelor of Technology",
+    "duration": "Aug 2015 - May 2019",
+    "tileSubheader": "Sri Manakula Vinayagar Engineering college",
     "instituteHref":"https://smvec.ac.in",
-    "imgSrc": "Smvec",
-    "description": "Graduated in the stream of Electrical and Electronics Engineering with 87.5%."
+    "tileDescription": "Graduated in the stream of Electrical and Electronics Engineering with 87.5%. During my graduation course, I have developed my logical and problem solving skills."
 },
 {
-    "course": "Higher Secondary Schooling",
-    "where": "New Modern Vidhya Mandir Hr. Sec. School",
-    "period": "2013 - 2015",
+    "logoSrc": "Nmvmhss.jpg",
+    "tileName": "HSC",
+    "tileHeader": "Higher Secondary Schooling",
+    "duration": "Jun 2013 - Mar 2015",
+    "tileSubheader": "New Modern Vidhya Mandir Hr. Sec. School",
     "instituteHref": "http://www.newmodernschool.org/",
-    "imgSrc": "Nmvmhss",
-    "description": "Completed higher schooling securing 90.5%"
+    "tileDescription": "Completed higher schooling securing 90.5% in the stream of Computer Science and Mathematics. Period which I was very much interested into CS and programming."
 },
 {
-    "course": "Secondary Schooling",
-    "where": "New Modern Vidhya Mandir Hr. Sec. School",
-    "period": "2013",
+    "logoSrc": "Nmvmhss.jpg",
+    "tileName": "SSLC",
+    "tileHeader": "High School",
+    "duration": "Jun 2012 - Mar 2013",
+    "tileSubheader": "New Modern Vidhya Mandir Hr. Sec. School",
     "instituteHref": "http://www.newmodernschool.org/",
-    "imgSrc": "Nmvmhss",
-    "description": "Completed higher schooling securing 95.2%"
+    "tileDescription": "Completed high schooling securing 95.2% in general education under State Board Syllabus."
 }]

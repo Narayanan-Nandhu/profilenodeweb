@@ -1,0 +1,81 @@
+.landing {
+    /* background: #ffef3b; */
+    background: linear-gradient(45deg, #f12711, #f5af19);
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+    color:  white;
+    /* animation: textFadeIn 1s ; */
+    height: 25rem
+}
+
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap");
+
+.landing-firsthalf {
+    margin-top: 1rem !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+
+
+.landing-secondHalf {
+    display: flex;
+    justify-content: center;
+}
+
+.name-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icons {
+    padding: 1rem 1rem 1rem 0rem;
+}
+
+.contact-icons a {
+   color:  white !important
+}
+
+.profile-image {
+    height: 25rem;
+    width: 25rem;
+    margin-top: 5rem;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media(max-width:767px) {
+    .landing {
+        background: linear-gradient(45deg, #1a2a6c,#b21f1f, #fdbb2d);
+        height: 20rem;
+        background-repeat: no-repeat;
+        display: flex;
+        align-content: space-around;
+        flex-direction: column;
+        
+    }
+
+    .profile-image {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 1.5rem !important;
+        margin-top: 2rem;
+    }
+}

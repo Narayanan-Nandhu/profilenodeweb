@@ -1,21 +1,24 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Data from "../../data/data.json";
+import { motion } from 'framer-motion/dist/framer-motion';
 
 const skills = () => {
   return (
     <React.Fragment>
-      <Container>
-      <div className="general-section">
-        {/* <div class="col-md-8 offset-md-3"> */}
-          <h2 className="general-sub-section-title">Skills</h2>
-          <Row>
+      <Container id="skills">
+      <Row className="justify-content-md-center justify-content-xs-center justify-content-sm-center">
+        <Col>
+        <h3><strong>Skills</strong></h3>
+        <Row>
             <Col>
               <h4 className="skills-type-head">Primary</h4>
               <div className="skills-section">
-                {Data.skills.primary.map((value) => (
-                  <h3>
+                {Data.skills.primary.map((value, key) => (
+                  <h3 key={key}>
+                    <motion.div key={key}  whileTap={{ scale: 0.9 }}>
                     <button className="skills-badge">{value}</button>
+                    </motion.div>
                   </h3>
                 ))}
               </div>
@@ -25,16 +28,18 @@ const skills = () => {
             <Col>
               <h4 className="skills-type-head">Professional</h4>
               <div className="skills-section">
-                {Data.skills.professional.map((value) => (
-                  <h3>
+                {Data.skills.professional.map((value,key) => (
+                  <h3 key={key}>
+                      <motion.div  key={key} whileTap={{ scale: 0.9 }}>
                     <button className="skills-badge">{value}</button>
+                    </motion.div>
                   </h3>
                 ))}
               </div>
             </Col>
           </Row>
-        {/* </div> */}
-      </div>
+        </Col>
+        </Row>
       </Container>
     </React.Fragment>
   );

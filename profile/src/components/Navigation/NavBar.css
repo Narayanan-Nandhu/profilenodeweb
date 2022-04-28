@@ -1,4 +1,4 @@
-.custom-nav-bar {
+/* .custom-nav-bar {
     justify-content: center !important;
   }
   
@@ -15,7 +15,7 @@
   .navbar-toggle-position{
     margin-left: 80vw;
   }
-  .nav-text{
+  .nav-text {
     color: ivory !important ;
   }
 
@@ -96,3 +96,70 @@ align-items: flex-start;
   .off-canvas{
 width: auto !important;
   }
+ */
+
+  /* Below are new code */
+
+  .navigation-elements {
+    width: "100%";
+  }
+
+  .home-page {
+    margin-left: 2rem
+  }
+
+ .nav-items-design {
+  color: white !important;
+   font-size: medium;
+   font-weight: bold;
+   padding: 0 29px 0 !important;
+ }
+ 
+ .nav-list-canvas {
+   align-items: center;
+ }
+
+  @media(max-width:767px) {
+    
+    .navigation-elements {
+      display: none;
+    }
+
+    .nav-items-design {
+      color: white !important;
+      margin: 0.5rem 0rem;
+    }
+
+    .offcanvasNavbar-custom {
+      width: 250px !important;
+    }
+
+    .offcanvas-body {
+      padding: 1rem;
+    }
+
+    .scrolled {
+        display: none;
+    }
+
+
+    #basic-navbar-nav {
+      display: none;
+    }
+  }
+
+
+      
+  .scrolled {
+    color: #f5af19 !important;
+    background-color: white !important;
+    transition: background-color 200ms linear;
+  }
+
+.nav-item-scrolled a{
+  color:  #f5af19 !important;
+}
+
+.nav-items-link-canvas {
+  color: black;
+}

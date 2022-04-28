@@ -3,20 +3,19 @@
     background: none;
     background: linear-gradient(45deg, #2e3192, #1bffff);
     background-position: center;
-  }
-  
-  .contact-section {
+}
+
+.contact-section {
     margin: 0 auto;
     max-width: var(--content-width);
-    padding: 36px 0 24px 32px;
-    padding-left: var(--content-padding);
-  }
-  
-  .content-section{
-      padding: 15px 15px 50px;
-  }
-  
-  .footer-section h3 {
+    padding: 36px 0 24px var(--content-padding);
+}
+
+.content-section {
+    padding: 15px 15px 50px;
+}
+
+.footer-section h3 {
     opacity: 0.7;
     font-family: "Roboto Mono", monospace;
     letter-spacing: 0.05rem;
@@ -24,27 +23,84 @@
     font-size: 36px;
     font-weight: bolder;
     margin: 50px 3px 10px;
-  }
-  
-  .footer-info .personal-info{
+}
+
+.footer-info .personal-info {
     padding: 10px 0 50px;
     margin: auto;
     width: 21rem;
-  }
-  
-   .mail-info{
-      padding: 10px 0 50px;
-    }
-  
-  .footer-info h5 {
+}
+
+.mail-info {
+    padding: 10px 0 50px;
+}
+
+.footer-info h5 {
     opacity: 0.7;
     font-family: "Roboto Mono", monospace;
     color: ivory;
     font-size: 25px;
-  }
-  
-  .submit-button{
+}
+
+.submit-button {
     border-radius: 50px !important;
-    color:ivory;
+    color: ivory;
     text-decoration: ivory;
-  }
+}
+
+/* Below are new lines of Code */
+
+.footer-container {
+    height: 25rem;
+    background: black;
+    color: ivory;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+.footer-mail-box {
+    background-color: white;
+    padding: 1rem;
+    display: flexbox;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    color: grey
+}
+
+.error-state {
+    border-color: #ff0000;
+}
+
+span.error-message {
+    color: "#FF0000";
+    float: "left";
+    padding: "2px";
+}
+
+.send-button {
+    border-radius: 1rem;
+    float: left;
+    margin-top: 5px;
+}
+
+.mailing-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dotted-line-footer {
+    background-image: linear-gradient(to right, #ccc 0%, #ccc 50%, transparent 50%);
+}
+@media(max-width:767px) {
+    .footer-container {
+        height: 45rem;
+    }
+}
+
+@media only screen and (min-width: 600px)  {
+    .footer-container {
+        height: 45rem;
+    }
+}

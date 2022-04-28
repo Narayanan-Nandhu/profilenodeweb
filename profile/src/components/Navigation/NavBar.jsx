@@ -1,76 +1,70 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Offcanvas } from "react-bootstrap";
-import navBarScrolled from "../utils";
-import { MenuArrow } from '@styled-icons/evaicons-solid/MenuArrow'
+import {  motion } from 'framer-motion/dist/framer-motion'
+import { MenuArrowOutline } from '@styled-icons/evaicons-outline/MenuArrowOutline'
+import './NavBar.css'
 
 const NavBar = (navdata) => {
   const { navList } = navdata;
-  navBarScrolled();
-  const [show, setShow] = useState(false);
-  // const [scrollTo, setScrollTo] = useState('aboutMe');
-  const [ scrolled, setscrolled] = useState(false);
-const handleSideNavOpen = () => {
-  setShow(true);
-};
 
-const handleSideNavClose = () => {
-  setShow(false);
-};
+  const [scrolled, setscrolled] = useState(false);
+  // const [show, setShow] = useState(false)
+  const [isOpen, setOpen] = useState(false);
 
-const handleOnExit = () => {
-var url = window.location.href;
-const urlsubstring = url.substring(url.lastIndexOf('#') + 1);
-var element =((urlsubstring).includes("/")) ? "home" : urlsubstring;
-var elmnt = document.getElementById(element);
-elmnt.scrollIntoView();
-}
   window.onscroll = function () {
-    var navbar = document.querySelector('.custom-nav-bar');
     if (window.pageYOffset > 0) {
-      setscrolled(true)
-      navbar.classList.add('scrolled')
+      setscrolled(true);
     } else {
-      navbar.classList.remove('scrolled')
       setscrolled(false)
     }
   }
-
-
+  const handleOnExit = () => {
+    var url = window.location.href;
+    const urlsubstring = url.substring(url.lastIndexOf('#') + 1);
+    var element = (((urlsubstring).includes("/")) ? "home" : urlsubstring) ?? "home";
+    var elmnt = document.getElementById(element);
+    elmnt.scrollIntoView();
+  }
 
   return (
     <React.Fragment>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-nav-scroll custom-nav-bar" >
-        
-        <Navbar.Toggle className="navbar-toggle-position"><MenuArrow size={25} onClick={handleSideNavOpen}/></Navbar.Toggle>
-        
-        <Offcanvas show={show} onHide={handleSideNavClose} className="off-canvas" restoreFocus={false} onExited={handleOnExit}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Narayanan Srinivasan</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <Nav className="justify-content-start flex-grow-1 pe-3 side-nav">
-       
-            {navList.map((navItem) => {
-
-              return (<Nav.Link href={navItem.href} onClick={handleSideNavClose} >{navItem.name}</Nav.Link>)
-            })}
-          </Nav>
-        </Offcanvas.Body>
-      </Offcanvas>
-
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            {navList.map((navItem) => (
-              <li class="nav-item">
-                <a class={`nav-link navItemText ${scrolled ? 'scrolled-nav-text' : 'nav-text'}`} href={navItem.href}>
-                  <strong>{navItem.name}</strong>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
+      <motion.div initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: .5 }}>
+        <Navbar className={`nav-bar ${scrolled ? 'scrolled' : ''}`} fixed="top" expand='lg' expanded={isOpen}>
+          <Navbar.Brand className="home-page" href="#home" onClick={handleOnExit}>
+            {'👨‍💻'} </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll"  onClick={() => { setOpen(isOpen ? false : "expanded");}}><MenuArrowOutline size={30} /></Navbar.Toggle>
+          <Navbar.Offcanvas
+            id="offcanvasNavbar"
+            className="offcanvasNavbar-custom"
+            aria-labelledby="offcanvasNavbar"
+            placement="start"
+            restoreFocus={false}
+            collapseonselect={true}
+            onExited={handleOnExit}
+          >
+            <Offcanvas.Header closeButton onClick={() => setOpen(false)}>
+              <Offcanvas.Title id="offcanvasNavbarLabel">Hey there,</Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav className="justify-content-end flex-grow-1 pe-3 nav-list-canvas">
+                {navList.map((navItem, key) => {
+                  return (<Nav.Link key={key} className="nav-items-link-canvas" onClick={() => { setOpen(false);}} href={navItem.href}>{navItem.name}</Nav.Link>)
+                })}
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className={`m-auto ${scrolled ? 'nav-item-scrolled' : ''}`}>
+              {navList.map((navItem, key) => {
+                return (<Nav.Link key={key} className="nav-items-design" href={navItem.href}>{navItem.name}</Nav.Link>)
+              })}
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </motion.div>
     </React.Fragment>
   )
 };
