@@ -3,6 +3,7 @@ import { Navbar, Nav, Offcanvas } from "react-bootstrap";
 import {  motion } from 'framer-motion/dist/framer-motion'
 import { MenuArrowOutline } from '@styled-icons/evaicons-outline/MenuArrowOutline'
 import './NavBar.css'
+import useEventTracker from "../../Analytics/AnalyticsTracker";
 
 const NavBar = (navdata) => {
   const { navList } = navdata;
@@ -10,7 +11,7 @@ const NavBar = (navdata) => {
   const [scrolled, setscrolled] = useState(false);
   // const [show, setShow] = useState(false)
   const [isOpen, setOpen] = useState(false);
-
+  const gaEventTrigger = useEventTracker();
   window.onscroll = function () {
     if (window.pageYOffset > 0) {
       setscrolled(true);
@@ -24,7 +25,7 @@ const NavBar = (navdata) => {
     var element = (((urlsubstring).includes("/")) ? "home" : urlsubstring) ?? "home";
     var elmnt = document.getElementById(element);
     elmnt.scrollIntoView();
-  }
+  } 
 
   return (
     <React.Fragment>
@@ -59,7 +60,7 @@ const NavBar = (navdata) => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className={`m-auto ${scrolled ? 'nav-item-scrolled' : ''}`}>
               {navList.map((navItem, key) => {
-                return (<Nav.Link key={key} className="nav-items-design" href={navItem.href}>{navItem.name}</Nav.Link>)
+                return (<Nav.Link key={key} className="nav-items-design" href={navItem.href} onClick={() => { gaEventTrigger('Nav|Bar: ', navItem.href)}}>{navItem.name}</Nav.Link>)
               })}
             </Nav>
           </Navbar.Collapse>

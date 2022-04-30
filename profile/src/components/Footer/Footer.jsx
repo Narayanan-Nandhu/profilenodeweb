@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 import { toast, ToastContainer } from 'react-toastify';
 import PersonalInfo from "../PersonalInfo";
-
+import useEventTracker from "../../Analytics/AnalyticsTracker";
 import "./Footer.css";
 toast.configure();
 
@@ -24,7 +24,7 @@ const Footer = () => {
   const [userEmailAddress, setUserEmailAddress] = useState("");
   const [emailBodyContent, setEmailBodyContent] = useState("");
   const [userName, setUserName] = useState("");
-
+  const gaEventTrigger = useEventTracker();
 
   const [mailerState, setMailerState] = useState({
     userEmailAddress,
@@ -40,7 +40,8 @@ const Footer = () => {
 
     if(userEmailAddress === '' || emailBodyContent === '' || userName === '' ) 
        return;
-
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    gaEventTrigger('Footer:EmailForm', 'SubmitBtn')
     setMailerState(prevState => ({
       ...prevState,
       userEmailAddress,

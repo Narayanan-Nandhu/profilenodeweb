@@ -14,9 +14,12 @@ import Skills from "./Skills/Skills";
 import Employment from "./Employment";
 import Education from "./Education/Education";
 import { motion } from 'framer-motion/dist/framer-motion';
+import useEventTracker from "../Analytics/AnalyticsTracker";
 
 
 const Profile = () => {
+
+  const gaEventTrigger = useEventTracker();
   return (
     <React.Fragment>
 
@@ -37,18 +40,18 @@ const Profile = () => {
               <Container className="icon-container">
                 <span className="contact-icons" id="linked-in">
                   <a href="https://www.linkedin.com/in/narayanan-srinivasan-1090">
-                    <AnimatedIcon delay={0} component={<LinkedinWithCircle size='30' />} />
+                    <AnimatedIcon delay={0} component={<LinkedinWithCircle size='30' onClick={() => gaEventTrigger('Profile:home', 'linkedIn')}/>} />
                   </a>
                 </span>
 
                 <span className="contact-icons" id="email">
                   <a href='mailto: nandhusuman1090@gmail.com'>
-                    <AnimatedIcon delay={0.5} component={<MailWithCircle size='30' />} />
+                    <AnimatedIcon delay={0.5} component={<MailWithCircle size='30' onClick={() => gaEventTrigger('Profile:home', 'email')}/>} />
                   </a>
                 </span>
                 <span className="contact-icons" id="gitHub">
                   <a href="https://github.com/Narayanan-Nandhu">
-                    <AnimatedIcon delay={1} component={<Github size='30' />} />
+                    <AnimatedIcon delay={1} component={<Github size='30' onClick={() => gaEventTrigger('Profile:home', 'gitHub')}/>} />
                   </a>
                 </span>
               </Container>

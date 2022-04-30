@@ -2,9 +2,9 @@ import React from "react";
 import { Col, Container } from "react-bootstrap";
 import { Row, Button } from "react-bootstrap";
 import Resume from "../../data/Narayanan.pdf";
-
+import useEventTracker from "../../Analytics/AnalyticsTracker";
 const AboutMe = () => {
-
+    const gaEventTrigger = useEventTracker();
     return (
         <React.Fragment>
             <Container className="about-me"  id="aboutMe">
@@ -31,7 +31,7 @@ const AboutMe = () => {
                                 target="_blank"
                                 value="Save Resume"
                                 rel="noreferrer"
-
+                                onClick={() => gaEventTrigger('AboutMe', 'Resume')}
                             >
                                 Save Resume
                             </Button>
