@@ -6,7 +6,6 @@ import "react-toastify/dist/ReactToastify.min.css";
 import ReactGA from 'react-ga';
 
 ReactGA.initialize(process.env.TRACKING_ID);
-console.log('process.env.',process.env.REACT_APP_TRACKING_ID);
 
 function App() {
 
