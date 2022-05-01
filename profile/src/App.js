@@ -5,7 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "react-toastify/dist/ReactToastify.min.css";
 import ReactGA from 'react-ga';
 
-ReactGA.initialize(process.env.TRACKING_ID);
+ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
 
 function App() {
 
