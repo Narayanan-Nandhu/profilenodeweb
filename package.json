@@ -8,6 +8,7 @@
     "postinstall": "cd profile && npm install && npm run build",
     "predeploy": "npm run postinstall",
     "deploy": "gh-pages -d build",
+    "build": "npm run postinstall",
     "client": "npm run start --prefix profile",
     "server:dev": "nodemon index.js --ignore './client/",
     "server": "node index.js",
