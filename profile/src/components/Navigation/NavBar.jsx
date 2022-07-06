@@ -37,11 +37,12 @@ const NavBar = (navdata) => {
           <Navbar.Brand className="home-page" href="#home" onClick={handleOnExit}>
             {'👨‍💻'} </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll"  onClick={() => { setOpen(isOpen ? false : "expanded");}}><MenuArrowOutline size={30} /></Navbar.Toggle>
-          <Navbar.Offcanvas
+          <Offcanvas
             id="offcanvasNavbar"
             className="offcanvasNavbar-custom"
             aria-labelledby="offcanvasNavbar"
             placement="start"
+            show={isOpen}
             restoreFocus={false}
             collapseonselect={true}
             onExited={handleOnExit}
@@ -56,7 +57,7 @@ const NavBar = (navdata) => {
                 })}
               </Nav>
             </Offcanvas.Body>
-          </Navbar.Offcanvas>
+          </Offcanvas>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className={`m-auto ${scrolled ? 'nav-item-scrolled' : ''}`}>
               {navList.map((navItem, key) => {

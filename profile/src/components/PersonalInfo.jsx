@@ -18,7 +18,7 @@ const PersonalInfo = () => {
             <dl>
               <dt>Email:</dt>
               <dd>
-                <a href="mailto:nandhusumn1090@gmail.com" id="personal-info">nandhusumn1090@gmail.com</a>
+                <a href="mailto:nandhusuman1090@gmail.com" id="personal-info">nandhusuman1090@gmail.com</a>
               </dd>
               <dt>Address:</dt>
               <dd>
