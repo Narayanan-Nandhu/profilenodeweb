@@ -16,10 +16,6 @@ const PersonalInfo = () => {
           <h3><strong>Contact me at</strong></h3>
           <Row className="justify-content-md-center">
             <dl>
-              <dt>Phone:</dt>
-              <dd>
-                <a href="tel:+919500870204" id="personal-info">+91 9500 870 204</a>
-              </dd>
               <dt>Email:</dt>
               <dd>
                 <a href="mailto:nandhusumn1090@gmail.com" id="personal-info">nandhusumn1090@gmail.com</a>
