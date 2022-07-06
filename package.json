@@ -15,6 +15,9 @@
     "start": "node index.js",
     "dev": "concurrently \"npm run server:dev\" \"npm run client\""
   },
+  "engines": {
+    "node": "16.x"
+  },
   "homepage": "http://narayananSrinivasan.github.io/profilenodeweb",
   "author": "narsrinivasan",
   "license": "ISC",
